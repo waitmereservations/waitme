@@ -1,7 +1,0 @@
-[{"_id":{"$oid":"5f6d0f5dc51509da900317ce"},"name":"seated","__v":0},
-{"_id":{"$oid":"5f6d0f8a3a4c46daae1ab3e5"},"name":"appetizer","__v":0},
-{"_id":{"$oid":"5f6d0f921d6dcfdabcf5b3d7"},"name":"entree","__v":0},
-{"_id":{"$oid":"5f6d21bfc8ca2bf120cba623"},"name":"dessert"},
-{"_id":{"$oid":"5f78ea621346158999252ccf"},"name":"bill"},
-{"_id":{"$oid":"5f78ea7c1346158999252cd0"},"name":"left"},
-{"_id":{"$oid":"5f81f50a5c589c4acb98315e"},"name":"queued"}]

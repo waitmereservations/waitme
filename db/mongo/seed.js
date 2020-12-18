@@ -10,8 +10,6 @@ db.tables.save( {table_number : "Table 7" , capacity : 4 , createdAt : new Date(
 db.tables.save( {table_number : "Table 8" , capacity : 4 , createdAt : new Date(1079895594000) , updatedAt : new Date(1079895594000) , parties : null ,table_status : null });
 db.tables.save( {table_number : "Table 9" , capacity : 4 , createdAt : new Date(1079895594000) , updatedAt : new Date(1079895594000) , parties : null ,table_status : null });
 db.tables.save( {table_number : "Table 10" , capacity : 4 , createdAt : new Date(1079895594000) , updatedAt : new Date(1079895594000) , parties : null ,table_status : null });
-db.tables.save( {table_number : "Table 11" , capacity : 4 , createdAt : new Date(1079895594000) , updatedAt : new Date(1079895594000) , parties : null ,table_status : null });
-db.tables.save( {table_number : "Table 12" , capacity : 4 , createdAt : new Date(1079895594000) , updatedAt : new Date(1079895594000) , parties : null ,table_status : null });
 db.tables.save( {table_number : "waitlist" , capacity : 4 , createdAt : new Date(1079895594000) , updatedAt : new Date(1079895594000) , parties : null ,table_status : null });
 db.tables.save( {table_number : "reservation" , capacity : 4 , createdAt : new Date(1079895594000) , updatedAt : new Date(1079895594000) , parties : null ,table_status : null });
 
