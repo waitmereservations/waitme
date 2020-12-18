@@ -1,0 +1,3 @@
+[{"_id":{"$oid":"5fab632060829a9bd3e3be68"},"name":"walkin"},
+{"_id":{"$oid":"5fab632860829a9bd3e3be69"},"name":"reservation"},
+{"_id":{"$oid":"5fab633360829a9bd3e3be6a"},"name":"waitlist"}]

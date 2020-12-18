@@ -1,0 +1,31 @@
+version: "3.8"
+services: 
+  mongo:
+    image: mongo
+    container_name: mongo
+    volumes:    
+      - ./db/mongo/seed.js:/docker-entrypoint-initdb.d/seed.js:ro
+    ports:
+      - '27017:27017'
+  api:
+    container_name: api
+    build:
+      context: "api"
+      dockerfile: Dockerfile
+    image: api
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    environment:
+      WAIT_HOSTS: mongo:27017    
+  frontend:
+    container_name: frontend
+    build:
+      context: frontend
+      dockerfile: Dockerfile   
+    image: waitlist  
+    ports:
+      - "3001:3000"
+    stdin_open: true  
+           
