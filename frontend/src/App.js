@@ -20,7 +20,7 @@ class App extends Component {
       destinationTable: "",
       parties: null,
       walkin: {}, 
-      walkinListArray: [{id:"walkin1", name:"1 Person Walk-In"},{id:"walkin2", name:"2 People Walk-In"},,{id:"walkin3", name:"3 People Walk-In"},
+      walkinListArray: [{id:"walkin1", name:"1 Person Walk-In"},{id:"walkin2", name:"2 People Walk-In"},{id:"walkin3", name:"3 People Walk-In"},
                   {id:"walkin4", name:"4 People Walk-In"},{id:"walkin5", name:"5 People Walk-In"},{id:"walkin6", name:"6 People Walk-In"},
                   {id:"walkin7", name:"7 People Walk-In"},{id:"walkin8", name:"8 People Walk-In"},{id:"walkin9", name:"9 People Walk-In"},
                   {id:"walkin10", name:"10 People Walk-In"},{id:"walkin11", name:"11 People Walk-In"},{id:"walkin12", name:"12 People Walk-In"}]
