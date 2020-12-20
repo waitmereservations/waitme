@@ -4,7 +4,7 @@ import axios from 'axios';
 export const fetchParties =  ()  => async dispatch => {
     const config = {
         method: 'get', 
-        url: 'http://localhost:5000/party',
+        url: 'http://api:5000/party',
         headers: { 'Content-Type' :'application/json'}
     }
 
@@ -18,7 +18,7 @@ export const fetchParties =  ()  => async dispatch => {
 }
 
 export const updateParties =  (partyTableObj, parties)  => async dispatch => {
-    const partyArray = await axios.put('http://localhost:5000/asigntable',partyTableObj);
+    const partyArray = await axios.put('http://api:5000/asigntable',partyTableObj);
     if (partyArray.status === 200) {
         dispatch({
             type: UPDATE_PARTY_STATE,
@@ -61,7 +61,7 @@ export const updateWaitList =  (waitListObj)  => async dispatch => {
                 }
     let waitListRes  = ''   
     try {
-        waitListRes = await axios.put('http://localhost:5000/waitlist',props);
+        waitListRes = await axios.put('http://api:5000/waitlist',props);
         dispatch({
             type: UPDATE_WAITLIST,
             payload: waitListRes.data[0].stack, 
@@ -93,7 +93,7 @@ export const createReservation =  (reservationObj)  => async dispatch => {
                     reservation_confirmed: reservationObj.reservation_confirmed
                 }
      
-    const reservationRes = await axios.post('http://localhost:5000/reservation',props);
+    const reservationRes = await axios.post('http://api:5000/reservation',props);
     if (reservationRes.status === 200) {
         dispatch({
             type: CREATE_RESERVATION,
@@ -117,7 +117,7 @@ export const updateReservation =  (reservationObj)  => async dispatch => {
                 }
     let reservationRes  = ''   
     try {
-        reservationRes = await axios.put('http://localhost:5000/reservation',props);
+        reservationRes = await axios.put('http://api:5000/reservation',props);
         if (reservationRes.status === 200){
             dispatch({
                 type: UPDATE_RESERVATION,
@@ -160,7 +160,7 @@ export const createWalkin =  (walkinObj)  => async dispatch => {
                     table_number: walkinObj.table_number
                 }
 
-    const walkinRes = await axios.post('http://localhost:5000/walkin',props);
+    const walkinRes = await axios.post('http://api:5000/walkin',props);
     if (walkinRes.status === 200) {
         dispatch({
             type: CREATE_WALKIN,
