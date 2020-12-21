@@ -1,31 +1,41 @@
 version: "3.8"
 services: 
   mongo:
-    image: mongo
     container_name: mongo
-    volumes:    
-      - ./db/mongo/seed.js:/docker-entrypoint-initdb.d/seed.js:ro
+    build:
+      context: "db/mongo"
+      dockerfile: Dockerfile
+    image: index.docker.io/caliguy2322/waitmemongo:2
     ports:
       - '27017:27017'
+    networks:
+      - app-bridge  
   api:
     container_name: api
     build:
       context: "api"
       dockerfile: Dockerfile
-    image: api
+    image: index.docker.io/caliguy2322/waitmeapi:2
     ports:
       - "5000:5000"
+    networks: 
+      - app-bridge    
     depends_on:
       - mongo
     environment:
-      WAIT_HOSTS: mongo:27017    
+      WAIT_HOSTS: mongo:27017
   frontend:
     container_name: frontend
     build:
       context: frontend
       dockerfile: Dockerfile   
-    image: frontend  
+    image: index.docker.io/caliguy2322/waitmefrontend:2
+    networks: 
+      - app-bridge  
     ports:
-      - "3001:3000"
-    stdin_open: true  
+      - "3000:3000"
+    stdin_open: true
+networks:
+  app-bridge:
+    driver: bridge        
            
