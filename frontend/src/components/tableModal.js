@@ -34,7 +34,7 @@ class TableModal extends React.Component {
 
 
   async componentDidMount() {    
-    const res = await axios.get('http://localhost:5000/tableStatus', {});
+    const res = await axios.get('http://showcasemywork.me:5000/tableStatus', {});
     if (res.status === 200) {
       await this.setState({...this.state, tableStatusArray: res.data})
     }
