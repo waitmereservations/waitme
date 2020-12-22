@@ -59,28 +59,28 @@ class WaitListModal extends React.Component {
             <input type="hidden" name="table_number" value={table.table_number}/>
             <label>
             First Name:&nbsp;
-            <input type="text" name="first_name" value={first_name} onChange={this.onChange}/>
+            <input type="text" name="first_name" value={first_name} readOnly onChange={this.onChange}/>
             </label>
             <br />
             <label>
             Last Name:&nbsp;
-            <input type="text" name="last_name" value={last_name} onChange={this.onChange}/>
+            <input type="text" name="last_name" value={last_name} readOnly onChange={this.onChange}/>
             </label>
             <br />
             <label>
             Email:&nbsp;
-            <input type="text" name="email_address" value={email_address} onChange={this.onChange}/>
+            <input type="text" name="email_address" value={email_address} readOnly onChange={this.onChange}/>
             </label>
             <br />
             <label>
             Phone Number:&nbsp;
             
-            <input type="text" name="phone_number" value={phone_number} onChange={this.onChange}/>
+            <input type="text" name="phone_number" value={phone_number} readOnly onChange={this.onChange}/>
             </label>
             <br />
             <label>
             Party Size: &nbsp; 
-            <select name="party_size" onChange={this.onChange} defaultValue={party_size}>
+            <select name="party_size" onChange={this.onChange} readOnly defaultValue={party_size}>
                 <option value='0'></option>
                 {
                     this.state.party_size_list.map((e,key) => {
@@ -92,7 +92,7 @@ class WaitListModal extends React.Component {
             <br />
             <label>
             Quote Time (mins): &nbsp;
-            <select name="quote_time" onChange={this.onChange} defaultValue={quote_time}>
+            <select name="quote_time" onChange={this.onChange} readOnly defaultValue={quote_time}>
                 <option value='0'></option>
                 {
                     this.state.quote_time_list.map((e,key) => {

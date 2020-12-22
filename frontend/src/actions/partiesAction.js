@@ -28,15 +28,15 @@ export const updateParties =  (partyTableObj, parties)  => async dispatch => {
 }
 
 export const createWaitList =  (waitListObj)  => async dispatch => {
-    const props = { first_name: waitListObj.first_name, 
-                    last_name: waitListObj.last_name, 
-                    email_address: waitListObj.email_address, 
-                    phone_number: waitListObj.phone_number,
-                    party_type: waitListObj.party_type.name,
-                    party_status: waitListObj.party_status.name,
-                    party_size: waitListObj.party_size,
-                    table_number: waitListObj.table.table_number,
-                    quote_time: waitListObj.quote_time
+    const props = { first_name: 'readonlyf', 
+                    last_name: 'readonlyl', 
+                    email_address: 'readonly@readonly.com', 
+                    phone_number: '1231231232',
+                    party_type: 'waitlist',
+                    party_status: 'upcoming',
+                    party_size: '2',
+                    table_number: 'waitlist',
+                    quote_time: '5'
                 }
     const waitListRes = await axios.post(process.env.REACT_APP_SERVER_URL + '/waitlist',props);
     if (waitListRes.status === 200) {
@@ -49,15 +49,15 @@ export const createWaitList =  (waitListObj)  => async dispatch => {
 
 export const updateWaitList =  (waitListObj)  => async dispatch => {
     const props = { _id: waitListObj._id,
-                    first_name: waitListObj.first_name, 
-                    last_name: waitListObj.last_name, 
-                    email_address: waitListObj.email_address, 
-                    phone_number: waitListObj.phone_number,
-                    party_type: waitListObj.party_type.name,
-                    party_status: waitListObj.party_status.name,
-                    party_size: waitListObj.party_size.toString(),
-                    table_number: waitListObj.table.table_number,
-                    quote_time: waitListObj.quote_time.toString()
+                    first_name: 'readonlyf', 
+                    last_name: 'readonlyl', 
+                    email_address: 'readonly@readonly.com', 
+                    phone_number: '1231231232',
+                    party_type: 'waitlist',
+                    party_status: 'upcoming',
+                    party_size: '2',
+                    table_number: 'waitlist',
+                    quote_time: '5'
                 }
     let waitListRes  = ''   
     try {
@@ -81,16 +81,16 @@ export const updateWaitList =  (waitListObj)  => async dispatch => {
 }
 
 export const createReservation =  (reservationObj)  => async dispatch => {
-    const props = { first_name: reservationObj.first_name, 
-                    last_name: reservationObj.last_name, 
-                    email_address: reservationObj.email_address, 
-                    phone_number: reservationObj.phone_number,
-                    party_type: reservationObj.party_type.name,
-                    party_status: reservationObj.party_status.name,
-                    party_size: reservationObj.party_size,
-                    table_number: reservationObj.table.table_number,
-                    reservation_time: reservationObj.reservation_time,
-                    reservation_confirmed: reservationObj.reservation_confirmed
+    const props = { first_name: 'readonlyf', 
+                    last_name: 'readonlyl', 
+                    email_address: 'readonly@readonly.com', 
+                    phone_number: '1231231232',
+                    party_type: 'reservation',
+                    party_status: 'upcoming',
+                    party_size: '2',
+                    table_number: 'reservation',
+                    reservation_time: '10:00am',
+                    reservation_confirmed: false
                 }
      
     const reservationRes = await axios.post(process.env.REACT_APP_SERVER_URL + '/reservation',props);
@@ -104,16 +104,16 @@ export const createReservation =  (reservationObj)  => async dispatch => {
 
 export const updateReservation =  (reservationObj)  => async dispatch => {
     const props = { _id: reservationObj._id,
-                    first_name: reservationObj.first_name, 
-                    last_name: reservationObj.last_name, 
-                    email_address: reservationObj.email_address, 
-                    phone_number: reservationObj.phone_number,
-                    party_type: reservationObj.party_type.name,
-                    party_status: reservationObj.party_status.name,
-                    party_size: reservationObj.party_size.toString(),
-                    table_number: reservationObj.table.table_number,
-                    reservation_time: reservationObj.reservation_time.toString(),
-                    reservation_confirmed: reservationObj.reservation_confirmed
+                    first_name: 'readonlyf', 
+                    last_name: 'readonlyl', 
+                    email_address: 'readonly@readonly.com', 
+                    phone_number: '1231231232',
+                    party_type: 'reservation',
+                    party_status: 'upcoming',
+                    party_size: '2',
+                    table_number: 'reservation',
+                    reservation_time: '10:00am',
+                    reservation_confirmed: false
                 }
     let reservationRes  = ''   
     try {

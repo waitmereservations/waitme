@@ -59,15 +59,15 @@ class Waitlists extends Component {
     ));
 
     const nullParty = { 
-      first_name: '', 
-      last_name: '',
-      email_address: '',
-      phone_number: '',
-      party_type: { name: ''},
-      party_status: { name: ''},
-      party_size: '',
-      table: { table_number: ''},
-      quote_time: ''
+      first_name: 'readonlyf', 
+      last_name: 'readonlyl',
+      email_address: 'readonly@readonly.com',
+      phone_number: '1231231232',
+      party_type: { name: 'waitlist'},
+      party_status: { name: 'upcoming'},
+      party_size: '2',
+      table: { table_number: 'waitlist'},
+      quote_time: '5'
     }
     const newWaitList = (<div className="waitListText"> <button onClick={(e) => this.toggleModal(e, nullParty)}><i>+ Wait List</i></button></div>)
     return (

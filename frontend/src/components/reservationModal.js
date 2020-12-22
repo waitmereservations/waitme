@@ -69,22 +69,22 @@ class ReservationModal extends React.Component {
                 <input type="hidden" name="table_number" value={table.table_number}/>
                 <label>
                 First Name:&nbsp;
-                <input type="text" name="first_name" value={first_name} onChange={this.onChange}/>
+                <input type="text" name="first_name" value={first_name} readOnly onChange={this.onChange}/>
                 </label>
                 <br />
                 <label>
                 Last Name:&nbsp;
-                <input type="text" name="last_name" value={last_name} onChange={this.onChange}/>
+                <input type="text" name="last_name" value={last_name} readOnly onChange={this.onChange}/>
                 </label>
                 <br />
                 <label>
                 Email:&nbsp;
-                <input type="text" name="email_address" value={email_address} onChange={this.onChange}/>
+                <input type="text" name="email_address" value={email_address} readOnly onChange={this.onChange}/>
                 </label>
                 <br />
                 <label>
                 Phone Number:&nbsp;
-                <input type="text" name="phone_number" value={phone_number} onChange={this.onChange}/>
+                <input type="text" name="phone_number" value={phone_number} readOnly onChange={this.onChange}/>
                 </label>
                 <br />
                 <label>

@@ -60,15 +60,15 @@ class Reservation extends Component {
     ));
 
     const nullParty = { 
-      first_name: '', 
-      last_name: '',
-      email_address: '',
-      phone_number: '',
-      party_type: { name: ''},
-      party_status: { name: ''},
-      party_size: '',
-      table: { table_number: ''},
-      reservation_time: '',
+      first_name: 'readonlyf', 
+      last_name: 'readonlyl',
+      email_address: 'readonly@readonly.com',
+      phone_number: '1231231232',
+      party_type: { name: 'reservation'},
+      party_status: { name: 'upcoming'},
+      party_size: '3',
+      table: { table_number: 'reservation'},
+      reservation_time: '10:00am',
       reservation_confirmed: false
     }
 
