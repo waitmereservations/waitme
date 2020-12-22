@@ -2,9 +2,6 @@ version: "3.8"
 services: 
   mongo:
     container_name: mongo
-    build:
-      context: "db/mongo"
-      dockerfile: Dockerfile
     image: index.docker.io/caliguy2322/waitmemongo:2
     ports:
       - '27017:27017'
@@ -12,9 +9,6 @@ services:
       - app-bridge  
   api:
     container_name: api
-    build:
-      context: "api"
-      dockerfile: Dockerfile
     image: index.docker.io/caliguy2322/waitmeapi:2
     ports:
       - "5000:5000"
@@ -26,9 +20,6 @@ services:
       WAIT_HOSTS: mongo:27017
   frontend:
     container_name: frontend
-    build:
-      context: frontend
-      dockerfile: Dockerfile   
     image: index.docker.io/caliguy2322/waitmefrontend:2
     environment:
       REACT_APP_SERVER_URL: "http://showcasemywork.me:5000"
