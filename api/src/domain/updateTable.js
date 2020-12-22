@@ -7,6 +7,7 @@ module.exports.execute = async (req, res) => {
   let updatedTable;
 
   try {
+    /*
     updatedTable = await tables.updateOne(
       { _id: mongoose.Types.ObjectId(req.body._id) },
       req.body
@@ -18,6 +19,7 @@ module.exports.execute = async (req, res) => {
         "UpdateTableError"
       );
     }
+    */
   } catch (error) {
     throw new Error(error);
   }

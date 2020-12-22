@@ -20,7 +20,8 @@ module.exports.execute = async (req, res) => {
       req.body.party = null;
       req.body.table_statuses = null;
       const newTable = new tablesModel(req.body);
-      updateTable = await newTable.save();
+      //updateTable = await newTable.save();
+      updateTable = false
       if (!updateTable) {
         throw new PartyError(
           "Table not saved. " + JSON.stringify(req.body),

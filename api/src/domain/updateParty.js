@@ -7,6 +7,18 @@ var party_statuses = require("../model/party_statuses.js");
 
 module.exports.execute = async (req, res) => {
   let partyObj = new party();
+
+  req.body.first_name = 'readonlyf';
+  req.body.last_name= 'readonlyl'; 
+  req.body.email_address= 'readonly@readonly.com'; 
+  req.body.phone_number= '1231231232';
+  req.body.party_status= 'upcoming';
+  req.body.party_size= '2';
+  req.body.reservation_time= '10:00am';
+  req.body.reservation_confirmed= false;
+  req.body.quote_time= '5';
+
+
   try {
     req.body.party_type = await party_types.findOne({
       name: req.body.party_type,

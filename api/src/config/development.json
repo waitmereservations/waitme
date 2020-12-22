@@ -1,0 +1,13 @@
+{
+    "database": {
+      "mongo": {
+        "username": "root",
+        "password": "example",
+        "database": "waitme"
+      }
+    },
+    "server": {
+      "port": 5000,
+      "logDir": "/logs"
+    }
+  }
