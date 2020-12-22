@@ -30,6 +30,8 @@ services:
       context: frontend
       dockerfile: Dockerfile   
     image: index.docker.io/caliguy2322/waitmefrontend:2
+    environment:
+      REACT_APP_SERVER_URL: "http://showcasemywork.me:5000"
     networks: 
       - app-bridge  
     ports:

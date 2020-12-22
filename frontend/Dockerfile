@@ -16,6 +16,8 @@ RUN npm install react-scripts@3.4.1 -g --silent
 # add app
 COPY . ./
 
+ENV REACT_APP_SERVER_URL=http://showcasemywork.me:5000
+
 # start app
 CMD ["npm", "start"] 
 

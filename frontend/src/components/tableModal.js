@@ -6,6 +6,7 @@ import { updateTableStatus } from './../actions/tablesAction';
 import PropTypes from 'prop-types';
 import { FormGroup, Label } from 'reactstrap';
 
+
 class TableModal extends React.Component {
 
   constructor(props){
@@ -34,7 +35,7 @@ class TableModal extends React.Component {
 
 
   async componentDidMount() {    
-    const res = await axios.get('http://showcasemywork.me:5000/tableStatus', {});
+    const res = await axios.get(process.env.REACT_APP_SERVER_URL + '/tableStatus', {});
     if (res.status === 200) {
       await this.setState({...this.state, tableStatusArray: res.data})
     }

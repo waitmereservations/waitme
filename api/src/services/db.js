@@ -24,9 +24,6 @@ const URI =
   "mongo:27017/" +
   configuration.database.mongo.database();
 
-console.log("URI")
-console.log(URI)  
-
 const connectDB = async () => {
   await mongoose.connect(URI, { useNewUrlParser: true });
   console.log("db connected....");
